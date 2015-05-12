@@ -4,7 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.1.1/flexboxgrid.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
@@ -29,15 +31,29 @@
     <title>#ahmed</title>
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container" class="row">
+      <aside class="col-xs-2 col-sm-3">
+        <a href="http://ahmednuaman.com" id="logo">
+          <img src="logo.svg" alt="Ahmed Nuaman">
+        </a>
+        <div id="links">
+          <a target="_blank" href="http://ahmednuaman.com"><span class="fa fa-globe fa-fw"></span></a>
+          <a target="_blank" href="http://linkedin.com/in/ahmednuaman"><span class="fa fa-linkedin fa-fw"></span></a>
+          <a target="_blank" href="http://twitter.com/ahmednuaman"><span class="fa fa-twitter fa-fw"></span></a>
+          <a target="_blank" href="http://github.com/ahmednuaman"><span class="fa fa-github fa-fw"></span></a>
+          <a target="_blank" href="http://stackoverflow.com/users/398939/ahmed-nuaman"><span class="fa fa-stack-overflow fa-fw"></span></a>
+          <a target="_blank" href="https://angel.co/ahmed-nuaman"><span class="fa fa-angellist fa-fw"></span></a
+        </div>
+      </aside>
+      <div class="col-xs-10 col-sm-9">
+        <div id="cards" class="row"></div>
+      </div>
+    </div>
     <script id="cards-template" type="text/x-handlebars-template">
       {{#each data}}
-        <div class="card">
-          <h3>
-            <a href="{{html_url}}" title="{{name}}">{{name}}</a>
-          </h3>
-          <p>{{description}}</p>
-        </div>
+        <a href="{{html_url}}" title="{{name}}" class="card col-xs-12 col-sm-12 col-md-6 col-lg-4">
+          <em>{{name}}</em> &mdash; {{description}}
+        </a>
       {{/each}}
     </script>
   </div>
@@ -45,11 +61,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
   <script>
     jQuery(document).ready(function ($) {
-      var container = $('#container'),
+      var cards = $('#cards'),
           template = Handlebars.compile($('#cards-template').remove().html());
 
-      $.getJSON('https://api.github.com/users/ahmednuaman/repos?type=public&sort=updated&callback=?', function (data) {
-        container.html(template(data));
+      $.getJSON('https://api.github.com/users/ahmednuaman/repos?type=all&sort=updated&callback=?', function (data) {
+        cards.html(template(data));
       });
     });
   </script>
