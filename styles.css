@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,44 +26,106 @@ a:hover {
   opacity: 1;
 }
 
-.card {
-  font-size: .9em;
-  line-height: 1.5em;
-  padding: 30px;
-  text-decoration: none;
-}
-
-.card em {
-  display: block;
-  font-family: serif;
-  font-size: 1.5em;
-  line-height: 2em;
-}
-
-#links {
+#container {
+  align-content: stretch;
+  align-items: stretch;
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  width: 100%;
 }
 
-#links a {
-  display: block;
-  font-size: 2em;
-  margin: auto;
-}
+  #side {
+    width: 20%;
+  }
 
-#links a,
-#logo {
-  opacity: 1;
-  transition: none;
-}
+    #menu {
+      display: block;
+      position: fixed;
+      width: 20%;
+    }
 
-#logo {
-  display: block;
-  text-align: center;
-}
+      #links {
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+      }
 
-#logo img {
-  margin: 5% 0;
-  width: 80%;
-  max-width: 190px;
-}
+      #links a,
+      #logo {
+        opacity: 1;
+        transition: none;
+      }
+
+        #links a {
+          display: block;
+          font-size: 2em;
+          margin: auto;
+        }
+
+      #logo {
+        display: block;
+        text-align: center;
+      }
+
+        #logo img {
+          margin: 5% 0;
+          width: 80%;
+          max-width: 190px;
+        }
+
+  #main {
+    flex-grow: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-grow: 2;
+    padding-left: 20px;
+    width: calc(80% - 20px);
+  }
+
+    #cards {
+      display: flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+    }
+
+      .card {
+        display: block;
+        flex-grow: 2;
+        -webkit-flex-grow: 2;
+        -ms-flex-grow: 2;
+        font-size: .9em;
+        line-height: 1.5em;
+        padding: 5px;
+        text-decoration: none;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .card {
+          padding: 20px;
+          width: 50%;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .card {
+          padding: 30px;
+          width: calc(100% / 3);
+        }
+      }
+
+        .card em {
+          display: block;
+          font-family: serif;
+          font-size: 1.5em;
+          line-height: 2em;
+        }

@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.1.1/flexboxgrid.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
@@ -31,27 +30,29 @@
     <title>#ahmed</title>
   </head>
   <body>
-    <div id="container" class="row">
-      <aside class="col-xs-2 col-sm-3">
-        <a href="http://ahmednuaman.com" id="logo">
-          <img src="logo.svg" alt="Ahmed Nuaman">
-        </a>
-        <div id="links">
-          <a target="_blank" href="http://ahmednuaman.com"><span class="fa fa-globe fa-fw"></span></a>
-          <a target="_blank" href="http://linkedin.com/in/ahmednuaman"><span class="fa fa-linkedin fa-fw"></span></a>
-          <a target="_blank" href="http://twitter.com/ahmednuaman"><span class="fa fa-twitter fa-fw"></span></a>
-          <a target="_blank" href="http://github.com/ahmednuaman"><span class="fa fa-github fa-fw"></span></a>
-          <a target="_blank" href="http://stackoverflow.com/users/398939/ahmed-nuaman"><span class="fa fa-stack-overflow fa-fw"></span></a>
-          <a target="_blank" href="https://angel.co/ahmed-nuaman"><span class="fa fa-angellist fa-fw"></span></a
+    <div id="container">
+      <aside id="side">
+        <div id="menu">
+          <a href="http://ahmednuaman.com" id="logo">
+            <img src="logo.svg" alt="Ahmed Nuaman">
+          </a>
+          <div id="links">
+            <a target="_blank" href="http://ahmednuaman.com"><span class="fa fa-globe fa-fw"></span></a>
+            <a target="_blank" href="http://linkedin.com/in/ahmednuaman"><span class="fa fa-linkedin fa-fw"></span></a>
+            <a target="_blank" href="http://twitter.com/ahmednuaman"><span class="fa fa-twitter fa-fw"></span></a>
+            <a target="_blank" href="http://github.com/ahmednuaman"><span class="fa fa-github fa-fw"></span></a>
+            <a target="_blank" href="http://stackoverflow.com/users/398939/ahmed-nuaman"><span class="fa fa-stack-overflow fa-fw"></span></a>
+            <a target="_blank" href="https://angel.co/ahmed-nuaman"><span class="fa fa-angellist fa-fw"></span></a
+          </div>
         </div>
       </aside>
-      <div class="col-xs-10 col-sm-9">
-        <div id="cards" class="row"></div>
-      </div>
+      <section id="main">
+        <div id="cards"></div>
+      </section>
     </div>
     <script id="cards-template" type="text/x-handlebars-template">
       {{#each data}}
-        <a href="{{html_url}}" title="{{name}}" class="card col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <a href="{{html_url}}" title="{{name}}" class="card">
           <em>{{name}}</em> &mdash; {{description}}
         </a>
       {{/each}}
