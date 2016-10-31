@@ -64,6 +64,6 @@
     ]
   },
   "dependencies": {
-    "normalize-scss": "^6.0.0"
+    "materialize-css": "^0.97.8"
   }
 }
