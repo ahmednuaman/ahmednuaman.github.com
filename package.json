@@ -62,5 +62,8 @@
     "ignore": [
       "build"
     ]
+  },
+  "dependencies": {
+    "normalize-scss": "^6.0.0"
   }
 }
