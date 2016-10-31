@@ -64,6 +64,7 @@
     ]
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "materialize-css": "^0.97.8"
   }
 }

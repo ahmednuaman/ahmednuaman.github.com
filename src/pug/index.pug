@@ -5,20 +5,21 @@ html
     link(rel='stylesheet' href='asset/css/app.css')
     title Tech Wizard and Dachshund Wrestler ~ Ahmed Nuaman
   body
-    header
-      h1 Ahmed Nuaman
-      h2 Tech Wizard*
+    .container
+      header.row
+        .col.s12
+          h3 Ahmed Nuaman
+          h5 Tech Wizard*
 
-    section(role='main')
-      ul
-        li
-          a(href) My CV
-        li
-          a(href='https://github.com/ahmednuaman') Github
-        li
-          a(href='https://stackoverflow.com/users/398939/ahmed-nuaman') Stackoverflow
-        li 
-          a(href='https://twitter.com/ahmednuaman') Twitter
+      section(role='main').row
+        .col.s6.m3
+          a.waves-effect.waves-light.btn-large.btn-block(href='https://docs.google.com/document/d/1Fc3sLjcY6VL006wnBldi4wRMUZT4q1KpVTPiWOe61Oo/edit?usp=sharing') My CV
+        .col.s6.m3
+          a.waves-effect.waves-light.btn-large.btn-block(href='https://github.com/ahmednuaman') Github
+        .col.s6.m3
+          a.waves-effect.waves-light.btn-large.btn-block(href='https://stackoverflow.com/users/398939/ahmed-nuaman') Stackoverflow
+        .col.s6.m3 
+          a.waves-effect.waves-light.btn-large.btn-block(href='https://twitter.com/ahmednuaman') Twitter
 
     footer
       small *And dachshund wrestler

@@ -27,10 +27,19 @@ let config = {
   devtool: 'inline-source-map',
   module: {
     loaders: [{
-      test: /\.(woff2?|ttf|eot|svg)$/,
-      loader: 'file?name=asset/font/[name].[ext]?[hash]'
+      test: /\.woff2?/,
+      loader: 'url?limit=10000&mimetype=application/font-woff&name=asset/img/[name].[ext]?[hash]'
     }, {
-      test: /img\/.+\.(jpe?g|png|gif|svg)$/,
+      test: /\.ttf/,
+      loader: 'url?limit=10000&mimetype=application/octet-stream&name=asset/img/[name].[ext]?[hash]'
+    }, {
+      test: /\.eot/,
+      loader: 'file?name=asset/img/[name].[ext]?[hash]'
+    }, {
+      test: /\.svg/,
+      loader: 'url?limit=10000&mimetype=image/svg+xml&name=asset/img/[name].[ext]?[hash]'
+    }, {
+      test: /img\/.+\.(jpe?g|png|gif)$/,
       loader: 'url?limit=1000&name=asset/img/[name].[ext]?[hash]!img?progressive=true'
     }, {
       test: /\.json$/,
@@ -50,7 +59,7 @@ let config = {
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json', '.jpg', '.jpeg', '.gif', '.png', '.svg', '.pug'],
+    extensions: ['', '.js', '.jsx', '.json', '.jpg', '.jpeg', '.gif', '.png', '.pug'],
     alias: {
       img: `${src}/img/`
     }
