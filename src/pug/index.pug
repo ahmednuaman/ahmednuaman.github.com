@@ -7,60 +7,152 @@ html
   body.grey-text.text-lighten-4
     .container
       header.row
-        .col.s12
+        .col.s12.m8.offset-m2
           h3 Ahmed Nuaman #[small.grey-text Tech Wizard*]
 
-        .col.s12.m6
           p.flow-text.
             As a former employee of Google, BBC, Sky (and many more during my freelance years) I believe that 
             challenging myself is how I become a better developer and I love working on projects that'll push me. 
-          p.
-            I'm a CodeClub volunteer (DBS checked), have Basic Disclosure, and have worked in a number of industries in 
-            technical roles with additional management, training, and presentation tasks.
 
-          p 
-            b Technology summary
+          p
+            a.waves-effect.waves-dark.btn-large.yellow.darken-2.grey-text.text-darken-2(href='https://docs.google.com/document/d/1Fc3sLjcY6VL006wnBldi4wRMUZT4q1KpVTPiWOe61Oo/edit?usp=sharing') Download my cv
 
-        .col.s12.m6
-          section(role='main').row
-            .col.s12.m12.l6
-              .card.grey.darken-1
-                .card-content
-                  .card-title 
-                    .fa.fa-user
-                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis commodo lorem, vel convallis tellus. Nulla nec tempus lorem. Suspendisse potenti.
-                .card-action
-                  a.yellow-text.text-darken-2(href='https://docs.google.com/document/d/1Fc3sLjcY6VL006wnBldi4wRMUZT4q1KpVTPiWOe61Oo/edit?usp=sharing') Download my cv
+      hr
 
-            .col.s12.m12.l6
+      section(role='main').row  
+        .col.s12.m8.offset-m2
+          h5 Tech specs
+
+          p
+            b Languages:
+            br
+            .chip.yellow.darken-2 Javascript (ES6+, CLJS, TypeScript, JSX)
+            .chip.yellow.darken-2 Python
+            .chip.yellow.darken-2 Java (8, Scala, Clojure, Groovy)
+            .chip.yellow.darken-2 C# (.NET 4+, F#)
+            .chip.yellow.darken-2 PHP
+            .chip.yellow.darken-2 Shell/Bash/zsh
+            .chip.yellow.darken-2 HTML (Jade, HAML)
+            .chip.yellow.darken-2 CSS (SCSS, Less, Stylus)
+            .chip.yellow.darken-2 Obj-C (+ Swift)
+
+          p
+            b Frameworks:
+            br
+            .chip.yellow.darken-2 Angular (1, 2)
+            .chip.yellow.darken-2 React
+            .chip.yellow.darken-2 Aurelia
+            .chip.yellow.darken-2 Kendo
+            .chip.yellow.darken-2 jQuery
+            .chip.yellow.darken-2 Lodash
+            .chip.yellow.darken-2 Ramda
+            .chip.yellow.darken-2 Redux
+            .chip.yellow.darken-2 Django
+            .chip.yellow.darken-2 Flask
+            .chip.yellow.darken-2 Spring
+            .chip.yellow.darken-2 Akka
+            .chip.yellow.darken-2 Bootstrap
+            .chip.yellow.darken-2 Foundation
+            .chip.yellow.darken-2 Laravel
+            .chip.yellow.darken-2 WordPress
+            .chip.yellow.darken-2 msgpack
+            .chip.yellow.darken-2 GraphQL
+            .chip.yellow.darken-2 D3
+            .chip.yellow.darken-2 Highcharts
+            .chip.yellow.darken-2 Ionic (1, 2)
+            .chip.yellow.darken-2 VueJS
+
+          p
+            b Build:
+            br
+            .chip.yellow.darken-2 Gulp
+            .chip.yellow.darken-2 Grunt
+            .chip.yellow.darken-2 NPM (+ Yarn, Bower, Jam, JSPM)
+            .chip.yellow.darken-2 Make
+            .chip.yellow.darken-2 Maven
+            .chip.yellow.darken-2 Grails
+            .chip.yellow.darken-2 Gradle
+            .chip.yellow.darken-2 Ant
+            .chip.yellow.darken-2 Lein
+            .chip.yellow.darken-2 Composer
+            .chip.yellow.darken-2 Docker
+            .chip.yellow.darken-2 Ansible
+            .chip.yellow.darken-2 Chef
+            .chip.yellow.darken-2 Puppet
+            .chip.yellow.darken-2 Terraform
+            .chip.yellow.darken-2 Cloud Formation
+
+          p
+            b Systems:
+            br
+            .chip.yellow.darken-2 AWS
+            .chip.yellow.darken-2 GCP
+            .chip.yellow.darken-2 Azure
+            .chip.yellow.darken-2 Lambdas
+            .chip.yellow.darken-2 DynamoDB
+            .chip.yellow.darken-2 BigTable
+            .chip.yellow.darken-2 Redshift
+            .chip.yellow.darken-2 Redis
+            .chip.yellow.darken-2 Cassandra
+            .chip.yellow.darken-2 Cloudera
+            .chip.yellow.darken-2 SQL
+            .chip.yellow.darken-2 Elastic
+            .chip.yellow.darken-2 SQS
+            .chip.yellow.darken-2 RabbitMQ
+            .chip.yellow.darken-2 SNS
+            .chip.yellow.darken-2 MongoDB
+            .chip.yellow.darken-2 MQTT
+            .chip.yellow.darken-2 Nginx
+            .chip.yellow.darken-2 HA Proxy
+            .chip.yellow.darken-2 Neo4j
+
+
+      hr
+
+      section(role='contact').row
+        .col.s12.m8.offset-m2
+          .row
+            .col.s6
               .card.grey.darken-1
                 .card-content
                   .card-title 
                     .fa.fa-github
-                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis commodo lorem, vel convallis tellus. Nulla nec tempus lorem. Suspendisse potenti.
+                  p 
+                    b #[span#gh-followers 0] Followers
+                    br
+                    b #[span#gh-stars 0] Stars
                 .card-action
                   a.yellow-text.text-darken-2(href='https://github.com/ahmednuaman') Fork my github
 
-            .col.s12.m12.l6
+            .col.s6
               .card.grey.darken-1
                 .card-content
                   .card-title 
                     .fa.fa-stack-overflow
-                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis commodo lorem, vel convallis tellus. Nulla nec tempus lorem. Suspendisse potenti.
+                  p 
+                    b #[span#so-points 0] Points
+                    br
+                    b #[span#so-cups 0/0/0] Cups
                 .card-action
                   a.yellow-text.text-darken-2(href='https://stackoverflow.com/users/398939/ahmed-nuaman') Visit my stackoverflow
 
-            .col.s12.m12.l6 
-              .card.grey.darken-1
-                .card-content
-                  .card-title 
-                    .fa.fa-twitter
-                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis commodo lorem, vel convallis tellus. Nulla nec tempus lorem. Suspendisse potenti.
-                .card-action
-                  a.yellow-text.text-darken-2(href='https://twitter.com/ahmednuaman') Read my tweets
+          .row.center-align
+            .col.s3
+              a.btn-floating.waves-dark.btn-large.yellow.darken-2.grey-text.text-darken-2(href='https://twitter.com/ahmed')
+                .fa.fa-twitter
+            .col.s3
+              a.btn-floating.waves-dark.btn-large.yellow.darken-2.grey-text.text-darken-2(href='https://twitter.com/ahmed')
+                .fa.fa-linkedin
+            .col.s3
+              a.btn-floating.waves-dark.btn-large.yellow.darken-2.grey-text.text-darken-2(href='https://angel.co/ahmed-nuaman')
+                .fa.fa-angellist
+            .col.s3
+              a.btn-floating.waves-dark.btn-large.yellow.darken-2.grey-text.text-darken-2(href='mailto:yo@ahmed.sh?subject=From your website')
+                .fa.fa-envelope
 
+      hr
 
-    footer
-      small *And dachshund wrestler
+      footer.row.grey-text
+        .col.s12.m8.offset-m2.center-align *And dachshund wrestler
 
     script(src='asset/js/app.js')

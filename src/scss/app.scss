@@ -8,3 +8,12 @@ html,
 body {
   @extend .grey, .darken-3;
 }
+
+hr {
+  border-color: color('grey', 'darken-3');
+  border-style: solid;
+}
+
+a {
+  cursor: pointer;
+}
