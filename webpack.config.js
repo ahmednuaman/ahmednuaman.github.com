@@ -8,6 +8,7 @@ const path = require('path')
 const src = path.resolve(CWD, 'src')
 const webpack = require('webpack')
 const WebpackCleanPlugin = require('clean-webpack-plugin')
+const WebpackCopyPlugin = require('copy-webpack-plugin')
 const WebpackExtractTextPlugin = require('extract-text-webpack-plugin')
 const WebpackHtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackProgressBarPlugin = require('progress-bar-webpack-plugin')
@@ -82,7 +83,10 @@ let config = {
       minify: PRODUCTION ? {
         html5: true
       } : false
-    })
+    }),
+    new WebpackCopyPlugin([{
+      from: '../README.md'
+    }])
   ]
 }
 
