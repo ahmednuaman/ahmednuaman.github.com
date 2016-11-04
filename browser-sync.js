@@ -27,8 +27,8 @@ require('browser-sync')
       `${DIR}/asset/css/*.css`,
       `${DIR}/asset/font/*`,
       `${DIR}/asset/img/*`,
-      `${DIR}/*.html`,
-      `${DIR}/*.js`
+      `${DIR}/asset/js/*.js`,
+      `${DIR}/*.html`
     ],
     open: 'external'
   }, () => console.log('Browsersync is running...'))

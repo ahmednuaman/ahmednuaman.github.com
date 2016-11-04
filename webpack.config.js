@@ -17,7 +17,7 @@ let config = {
   context: src,
   cache: true,
   entry: {
-    'asset/js/app.js': './js/app.js',
+    'asset/js/app.js': ['babel-polyfill', './js/app.js'],
     'asset/css/app.css': './scss/app.scss'
   },
   output: {
